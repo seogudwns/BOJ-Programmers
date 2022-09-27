@@ -69,6 +69,28 @@ for i in range(1,(1<<n)):
 print(result)
 
 print('type3 :',time.time()-stt)
+
+stt = time.time()
+
+result = float('inf')
+
+for i in range(1,(1<<n)):
+    t1 = {j for j in range(n) if (1<<j) & i}
+    t2 = {i for i in range(n) if i not in t1}
+    team = 0
+    for j in t1:
+        for k in t1:
+            team += lst[j][k]
+    
+    for j in t2:
+        for k in t2:
+            team -= lst[j][k]
+    
+    result = min(result,abs(team))
+
+print(result)
+
+print('type4 :',time.time()-stt)  # clear.
 ```
 
 ### input 
@@ -87,9 +109,11 @@ print('type3 :',time.time()-stt)
 ### result
 ```
 2
-type1 : 0.00500178337097168
+type1 : 0.0039997100830078125
 2
-type2 : 0.0029892921447753906
+type2 : 0.003002643585205078
 2
-type3 : 0.007001399993896484
+type3 : 0.006997108459472656
+2
+type4 : 0.001998424530029297
 ```
