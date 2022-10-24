@@ -4,5 +4,6 @@ def solution(id_pw, db):
             if id_pw[1] == i[1]:
                 return "login"
             return "wrong pw"
+    else:
+        return "fail"
     
-    return "fail"
