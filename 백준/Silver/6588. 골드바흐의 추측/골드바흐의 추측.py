@@ -8,7 +8,7 @@ while True:
     x = tmp.pop()
     Prime.add(x)
     
-    for i in range(x,1000000,x):
+    for i in range(2*x,1000000,x):
         tmp.discard(i)
 
 while True:
@@ -17,7 +17,7 @@ while True:
         break
     
     for i in range(3, num//2+2,2):
-        if i in Prime and num-i in Prime:
+        if Prime&{i,num-i} == {i,num-i}:
             print('{} = {} + {}'.format(num,i,num-i))
             break
     else:
