@@ -1,0 +1,2 @@
+def solution(schedules, timelogs, startday):
+    return sum(1 for i in range(len(schedules)) if all((schedules[i]//100)*60 + (schedules[i]%100) + 10 - (timelogs[i][j]//100)*60 - (timelogs[i][j]%100) >= 0 for j in range(7) if j not in ((6-startday)%7,7-startday)))
