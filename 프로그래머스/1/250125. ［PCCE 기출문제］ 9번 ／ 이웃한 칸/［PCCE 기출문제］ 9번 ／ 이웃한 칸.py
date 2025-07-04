@@ -1,0 +1,1 @@
+def solution(board, h, w): return len([board[h+i][w+j] for i,j in [(-1,0),(0,-1),(1,0),(0,1)] if 0<=h+i<len(board) and 0<=w+j<len(board[0]) and board[h][w] == board[h+i][w+j]])
