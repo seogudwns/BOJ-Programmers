@@ -1,0 +1,1 @@
+print('{0} is {1}'.format(a:=int(input()),'odd' if a%2 else 'even'))
