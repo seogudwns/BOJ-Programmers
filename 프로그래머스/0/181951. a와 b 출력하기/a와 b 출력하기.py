@@ -1,0 +1,1 @@
+print('a = {0}\nb = {1}'.format(*map(int, input().strip().split(' '))))
