@@ -1,0 +1,2 @@
+def solution(n, slicer, num_list):
+    return num_list[:slicer[1]+1] if n == 1 else num_list[slicer[0]:] if n == 2 else num_list[slicer[0]:slicer[1]+1] if n == 3 else num_list[slicer[0]:slicer[1]+1:slicer[2]]
