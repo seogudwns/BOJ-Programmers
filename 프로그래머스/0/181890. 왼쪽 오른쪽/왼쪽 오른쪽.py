@@ -1,0 +1,2 @@
+def solution(str_list):
+    return [] if 'l' not in str_list and 'r' not in str_list else str_list[:str_list.index('l')] if 'r' not in str_list else str_list[str_list.index('r')+1:] if 'l' not in str_list else str_list[:str_list.index('l')] if str_list.index('l')<str_list.index('r') else str_list[str_list.index('r')+1:]
